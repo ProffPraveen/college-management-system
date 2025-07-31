@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+
+<style>
+    .cont{
+            border: 3px solid #ccc;
+            border-radius: 5px;
+            background:#f78203;
+            padding:20px;
+
+        }
+.form-control
+    {
+    height:40px;
+    border:none;
+    border-radius:5px;
+    padding-top:8px;
+
+    }
+ .feed:hover
+    {
+       filter:scale(100%);
+        transition:1s;
+        transform:scale(1.02);
+        background:blue;
+    }
+    .save
+    {
+    background:#f5c5c8;
+    margin-left:245px;
+    margin-top:25px;
+    }
+</style>
+<!-------------------Feedback start--------------->
+<!--------------start heading------------------>
+<div class="row">
+<div class="col-sm-5 mx-auto text-center my-4">
+    <p class="m-0 h2">
+    <i class="fa-solid fa-message"></i> Your Valuable
+    <b class="txt-color1">Feedback</b></p>
+    <i>Your feedback is welcome</i>
+    <hr/>
+</div>
+</div>
+<!-------------------end heading----------------->
+
+<div class="">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+        <!---------------start recruiter-------------->
+              <div class="col-sm-6 cont">
+            <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+                <h6>Name</h6><input name="name" type="text" placeholder="Name.." class="form-control shadow-lg mb-2"/><br/>
+                <h6>Your Picture</h6><input name="fu" type="file" class="form-control shadow-lg mb-2"/><br/>
+                <h6>Write Your Valuable Feedback</h6>
+                <textarea style="min-height:150px; resize:none" name="message" placeholder="Enter your feedback.." class="form-control shadow-lg mb-2"></textarea>
+               <input type="submit" value="Save" class="form-control feed save shadow-lg  w-25 mb-2 ">
+            </form>
+                  </div>
+
+            <div class="col-sm-6 p-4 feed">
+                <img src="{% static 'images/feedback.jpg'%}" style="height:370px;width:700px;margin-left:13px;"/>
+            </div>
+            </div>
+
+        </div>
+    </div>
+
+        <!-----------------end -------------->
+<!------------------Our Recruiters end------------------>
+{% endblock %}

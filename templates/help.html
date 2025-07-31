@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Desk Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background:#f78203;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 30%;
+            margin-top: 15px;
+            margin-left: 185px;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+
+</head>
+<body>
+<!--------------start heading------------------>
+<div class="row">
+<div class="col-sm-5 mx-auto text-center my-4">
+    <p class="m-0 h2">
+    <i class="fa-solid fa-users"></i> Help
+    <b class="txt-color1"> Desk</b></p>
+    <i>"How can we help?"</i>
+    <hr/>
+</div>
+</div>
+<!-------------------end heading----------------->
+    <div class="form-container">
+        <h2>Help Desk Support</h2>
+        <form autocomplete="off" method="post">
+            {% csrf_token %}
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="category">Issue Category :</label>
+            <select id="category" name="category" required>
+                <option value="Ragging Issue">Ragging Issue</option>
+                <option value="Sexual Harassment">Sexual Harassment </option>
+                <option value="Religious Issue">Religious Issue</option>
+                <option value="In Description">Others Issue</option>
+            </select>
+
+            <label for="description">Issue Description :</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

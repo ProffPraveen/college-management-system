@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block childpage %}
+
+<style>
+    .submit
+    {
+    margin-left:150px;
+    color:black;
+    background:#f78203;
+    }
+</style>
+
+<div class="container contact">
+<div class="row contact mb-3">
+
+                  <!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Contact <b class="txt-color1">Us
+       <i class="fa-solid fa-phone"></i>
+        </b></p>
+        <i> "We’re here for you"</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+    <div class="col-sm-6 ">
+        <div class="row">
+
+            <div class="col-sm-8 bg-light py-5 rounded-3">
+ <form autocomplete="off" method="post">
+     {% csrf_token %}
+                <div class="input-group flex-nowrap">
+  <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+  <input type="text" name="name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+                </div><br/>
+
+                <div class="input-group flex-nowrap mt-3">
+  <span class="input-group-text" ><i class="fa-solid fa-envelope"></i></span>
+  <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="addon-wrapping"/>
+</div><br/>
+                <div class="input-group flex-nowrap mt-3">
+  <span class="input-group-text" ><i class="fa-solid fa-phone"></i></span>
+  <input type="number" name="mobile" class="form-control" placeholder="Contact No." aria-label="Contact" aria-describedby="addon-wrapping"/>
+</div><br/>
+                <div class="input-group flex-nowrap mt-3">
+  <span class="input-group-text"><i class="fa-solid fa-building"></i></span>
+  <input type="text" name="subject" class="form-control" placeholder="Subject" aria-label="Branch" aria-describedby="addon-wrapping"/>
+</div><br/>
+                <div class="input-group flex-nowrap mt-3">
+  <span class="input-group-text"><i class="fa-solid fa-message"></i></span>
+  <input type="text" name="message" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="addon-wrapping"/>
+</div><br/>
+                <input type="submit" value="Save" class="form-control shadow-lg mb-1 w-25 submit"/>
+       </form>
+                </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+
+    <div class="col-sm-6 px-5 py-3">
+         <!----------------------Detail------------>
+
+         <!--------------------Detail------------>
+        <div class="row border border-2 border-dark  ">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8 px-2 py-3" >
+          <div class="fs-5"><i class="fa-solid fa-location-dot pe-2 pt-2"></i><b class="txt-color1">Aadampur Tarabganj Gonda ,UP</b></div><br/>
+          <div class="fs-5"><i class="fa-solid fa-phone pe-2 pt-3"></i><b class="txt-color1">+91 9026722223, +91 8474873764</b></div><br/>
+          <div class="fs-5"><i class="fa-solid fa-phone pe-2 pt-3"></i><b class="txt-color1">+91 4676574574, +91 8474873764</b></div><br/>
+          <div class="fs-5"><i class="fa-solid fa-envelope pe-2"></i><b class="txt-color1">gpat2230@gmail.com</b></div><br/>
+          <div class="fs-5"><i class="fa-solid fa-envelope pe-2"></i><b class="txt-color1">Branch Code : 2230</b></div><br/>
+          <div class="fs-5"><i class="fa-solid fa-envelope pe-2"></i><b class="txt-color1">Pin Code : 271401</b></div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+    </div>
+
+                  <!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Find Us On <b class="txt-color1">Google Map
+        <i class="fa-solid fa-location-dot"></i>
+        </b></p>
+        <i> "Success is not final, failure is not fatal: It is the courage to continue that counts."</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10 mt-2"><iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.3076542058006!2d81.88337667450546!3d26.92545955954434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999f62995555555%3A0x7136cb31bfaea5ff!2sGovernment%20Polytechnic%20Aadampur%20Tarabganj%20Gonda!5e0!3m2!1sen!2sin!4v1726639188902!5m2!1sen!2sin"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  <div class="col-sm-1"></div>
+</div>
+    </div>
+
+
+
+
+{% endblock %}

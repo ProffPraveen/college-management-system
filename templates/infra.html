@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block childpage %}
+<style>
+    .infra:hover
+    {
+        filter:grayscale(100%);
+        transition:1s;
+        transform:scale(1.02);
+    }
+</style>
+
+<!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Our <b class="txt-color1">Infrastructure
+        <i class="fa-solid fa-building"></i>
+        </b></p>
+        <i> "A campus designed to inspire learning and growth."</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+
+
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+
+        <!-- start infra -->
+{% for i in idata %}
+        <div class="col-sm-4">
+            <div class="card infra text-center shadow-lg mb-2 bg-body-tertiary rounded border-0">
+                <img src="../{{i.picture}}" style="max-height:280px;" class="img-thumbnail"/>
+                <div class="card-body">
+                    <b>{{i.title}}</b>
+                </div>
+
+            </div>
+
+        </div>
+            {% endfor %}
+
+        <!-- end infra -->
+            </div>
+    </div>
+</div>
+
+{% endblock %}

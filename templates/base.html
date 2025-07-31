@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/all.css' %}" rel="stylesheet"/>
+    <style>
+        body
+        {
+          overflow-x:hidden;
+        }
+        :root
+        {
+        --bgcolor1:#f78203;
+        --bgcolor2:#0f5676;
+        --bgcolor3:#ffb634;
+        --bgcolor4:#f5c5c8;
+        --bgcolor5:#f5ec90;
+        --bgcolor6:#dcd6d4;
+        --bgcolor7:#fed688;
+
+        }
+        .bg-mycolor1
+        {
+        background:var(--bgcolor1);
+        }
+         .bg-mycolor2
+        {
+        background:var(--bgcolor2);
+        }
+         .bg-mycolor3
+        {
+        background:var(--bgcolor3);
+        }
+         .bg-mycolor4
+        {
+        background:var(--bgcolor4);
+        }
+         .bg-mycolor5
+        {
+        background:var(--bgcolor5);
+        }
+        .bg-mycolor6
+        {
+        background:var(--bgcolor6);
+        }
+         .bg-mycolor7
+        {
+        background:var(--bgcolor7);
+        }
+
+        .txt-color1
+        {
+        color:var(--bgcolor1);
+        }
+        .txt-color2
+        {
+        color:var(--bgcolor2);
+        }
+        .txt-color3
+        {
+        color:var(--bgcolor3);
+        }
+        .t1 a
+        {
+        color:white;
+        text-decoration:none;
+
+        }
+         .t1
+        {
+        height:37px;
+        font-size:14px;
+        }
+         .ic
+        {
+        border:1px solid var(--bgcolor1);
+        height:28px;
+        width:25px;
+        text-align:center;
+        line-height:30px;
+        border-radius:2px;
+        color:var(--bgcolor1)
+        }
+        .ic:hover
+        {
+        border:1px solid var(--bgcolor1);
+        color:var(--bgcolor3);
+        transform:rotate(360deg);
+        transition:all .5s;
+        }
+        #menu
+        {
+        background:var(--bgcolor1) !important;
+
+        }
+        #menu ul li a
+        {
+        color:white;
+        }
+         #menu ul li a:hover{
+         background:rgba(128,128,128,1);
+
+         }
+        .slider
+        {
+        min-height:400px;
+        width:100% px;
+        }
+        img
+        {
+        max-height:500px;
+        }
+        .gallery
+        {
+        min-height:300px;
+        }
+
+         .recruiters
+        {
+        min-height:300px;
+        }
+        .rimg
+        {
+        max-height:150px;
+        }
+         .rsection
+        {
+        min-height:100px;
+
+        .feedback
+        {
+        min-height:300px;
+        }
+        .notice
+        {
+        min-height:100px;
+        }
+         .footer
+        {
+        min-height:400px;
+        width:100% px;
+        }
+        .vision
+        {
+        min-height:300px;
+        }
+
+        .vline
+        {
+        border-left:5px solid red;
+        min-height:50px;
+        }
+        .about
+        {
+         max-height:300px;
+        }
+        .iconcenter
+        {
+         position:absolute;
+        }
+        .contact
+        {
+          min-height:300px;
+        }
+        .f
+        {
+        background:#a9afba;
+        }
+
+
+    </style>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/all.css' %}" rel="stylesheet"/>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="container-fluid px-fluid bg-mycolor4">
+    <div class="row t1 bg-mycolor2 text-light text-center py-1 sticky-top">
+        <div class="col-sm-3 pt-1">
+            <a href="/faqs/">FAQs|</a>
+           <a href="/about/">About us</a> |
+        </div>
+
+        <div class="col-sm-2 text-center my-0 pt-0">
+            <i class="fa-solid fa-phone ic my-0 pt-1"></i>
+            +91,9026722223
+        </div>
+        <div class="col-sm-2">
+            <i class="fa-solid fa-envelope ic  pt-1"></i>
+            gpatg@gmail.com
+        </div>
+
+        <div class="col-sm-3 text-end">
+                   <i class="fa-brands fa-facebook ic bg-white pt-1"> </i>
+            <i class="fa-brands fa-twitter ic bg-white pt-1"> </i>
+            <i class="fa-brands fa-instagram ic bg-white pt-1"> </i>
+            <i class="fa-brands fa-linkedin ic bg-white pt-1"> </i>
+               </div>
+        <div class="col-sm-2 mt-1">
+<a href="/admin/" class="badge bg-mycolor1 rounded-3" target="_blank">Admin Login</a>
+</div>
+        </div>
+
+    <div class="row t2 pt-1">
+       <div class="col-sm-10 mx-auto">
+           <div class="row">
+               <div class="col-sm-3 my-3">
+                   <img src="{% static 'images/gpa.jpg'%}" style="height:120px;width:150px;"/>
+               </div>
+                 <div class="col-sm-6 fs-2 text-center my-2">
+                        <b class="txt-color1">
+          <i class="fa-solid fa-building-columns me-3"></i>GOVERNMENT POLYTECHNIC ADAMPUR TARABGANJ GONDA</b><br/>
+                    <h6> Affiliated to : Uttar Pradesh Board of Technical Education</h6>
+                 </div>
+
+               <div class="col-sm-3 text-end mt-2">
+                  <img src="{% static 'images/india.jpg'%}" style="height:150px" class="mx-6 pb-3"/>
+           </div>
+       </div>
+    </div>
+</div>
+    <!---------------------------Start menu--------------------------------->
+        <div class="row menu bg-mycolor1 sticky-top">
+            <div class="col-sm-12 mx-auto">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 sticky-top" id="menu">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-3" href="#"><b>GPATG</b></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
+
+        <li class="nav-item mx-1">
+          <a class="nav-link active" aria-current="page" href="/home/">
+              <i class="fa-solid fa-house ms-4"></i> Home</a>
+        </li>
+        <li class="nav-item ms-2">
+          <a class="nav-link" href="/about/" target="_blank">
+            <i class="fa-solid fa-address-card"></i> About Us</a>
+        </li>
+
+          <li class="nav-item ms-2">
+          <a class="nav-link active" aria-current="page" target="_blank" href="/principal/">
+              <i class="fa-solid fa-user"></i> Principal Message</a>
+        </li>
+
+<li class="nav-item ms-2">
+          <a class="nav-link" href="/infra/" target="_blank">
+            <i class="fa-solid fa-building"></i> Infrastructure</a>
+        </li>
+           <li class="nav-item ms-2">
+          <a class="nav-link" href="/course/" target="_blank">
+            <i class="fa-solid fa-book"></i> Courses</a>
+        </li>
+          <li class="nav-item ms-2">
+          <a class="nav-link" href="/faculty/" target="_blank">
+            <i class="fa-solid fa-building"></i> Faculty</a>
+        </li>
+          <li class="nav-item ms-2">
+          <a class="nav-link" href="/alumony/" target="_blank">
+            <i class="fa-solid fa-address-card"></i> Alumni</a>
+        </li>
+          <li class="nav-item ms-2">
+          <a class="nav-link" href="/recruiters/" target="_blank">
+            <i class="fa-solid fa-users"></i> Recruiters</a>
+        </li>
+          <li class="nav-item ms-2">
+          <a class="nav-link" href="/gallery/" target="_blank">
+            <i class="fa-solid fa-image"></i> Gallery</a>
+        </li>
+<li class="nav-item ms-2">
+          <a class="nav-link" href="/contact/" target="_blank">
+              <i class="fa-solid fa-phone"></i> Contact Us</a>
+        </li>
+          <li class="nav-item ms-2">
+          <a class="nav-link" href="/feedback/" target="_blank">
+            <i class="fa-solid fa-message"></i> Feedback</a>
+        </li>
+
+          <li class="nav-item ms-2">
+          <a class="nav-link" href="/help/" target="_blank">
+            <i class="fa-solid fa-message"></i> Help Desk</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+            </div>
+              </div>
+                <!--------------end menu---------------->
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        {% block childpage %}
+
+        {% endblock %}
+    </div>
+</div>
+
+
+<!----------------------------footer start--------------------------->
+
+    <div class="container-fluid bg-mycolor7  footer mt-5">
+
+        <footer class="text-center text-lg-start text-dark">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="https://www.facebook.com/" class="me-4">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://x.com/?lang=en" class="me-4">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.google.com/" class="me-4">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="https://www.instagram.com/" class="me-4">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/
+
+" class="me-4">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section>
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>College name
+          </h6>
+          <p>
+         Government Polytechnic Aadampur Tarabganj Gonda,(UP)
+          </p>
+            <p>
+         Branch code : 2230
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+          Branches
+          </h6>
+          <p>
+            <a href="/course/" class="text-reset">Computer Science & Engineering</a>
+          </p>
+          <p>
+            <a href="/course/" class="text-reset">Mechanical Automobiles</a>
+          </p>
+          <p>
+            <a href="/course/" class="text-reset">Mechanical Production</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="/about/" class="text-reset">About Us</a>
+          </p>
+          <p>
+            <a href="/gallery/" class="text-reset">Gallery</a>
+          </p>
+          <p>
+            <a href="/contact/" class="text-reset">Contact Us</a>
+          </p>
+          <p>
+            <a href="/recruiters/" class="text-reset">Recruiters</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Aadampur,Gonda UP India</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            gpat2230@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 9026722223</p>
+          <p><i class="fas fa-print me-3"></i> + 91  9565104040</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © Company Name:
+    <a class="text-reset fw-bold" href="#">apr technology</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+    </div>
+<!----------------------footer end------------------------>
+</div>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/67f4142e910681190e7f1aab/1io8mtm9m';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block childpage %}
+
+<style>
+    .image
+    {
+    height:380px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left:200px;
+    }
+       .message
+    {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size:25px;
+    padding:15px;
+    }
+   .border
+    {
+    border: 5px solid black;
+    }
+</style>
+<div class="container-fluid">
+
+             <!-- start heading-->
+<div class="row">
+    <div class="col-sm-5 mx-auto text-center my-4">
+        <p class="fs-3 m-0">Principal <b class="txt-color1">Message
+        <i class="fa-solid fa-user"></i>
+        </b></p>
+        <i> "Success is not final, failure is not fatal: It is the courage to continue that counts."</i>
+        <hr/>
+    </div>
+</div>
+<!-- end heading-->
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="row pt-4">
+ {% for p in mdata %}
+        <div class="col-sm-6">
+          <img src="/{{p.principal_picture}}" class="img-fluid float-center rounded-3 image"/>
+        </div>
+        <div class="col-sm-6 p-2 ">
+          <p class="message">{{p.message}}</p>
+          <div class="text-end"><b class="txt-color1">PRINCIPAL<br/>
+          {{p.principal_name}}</b></div>
+        </div>
+           {% endfor %}
+      </div>
+    </div>
+
+    <div class="col-sm-4 pt-4">
+      <div class="card border-0 shadow-lg mx-auto w-75 " style="width: 18rem;">
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><a href="/about/"> University At a Glance</a> </li>
+    <li class="list-group-item"><a href="/about/">About Us</a></li>
+    <li class="list-group-item"><a href="/about">Our Vision</a></li>
+    <li class="list-group-item"><a href="/about/">Our Mission</a></li>
+    <li class="list-group-item"><a href="/course/">Our Courses</a></li>
+    <li class="list-group-item"><a href="/recruiters/">Our Recruiters</a></li>
+    <li class="list-group-item"><a href="/alumony/">Our Alumni</a></li>
+    <li class="list-group-item"><a href="/faculty/">Our Faculty Members</a></li>
+  </ul>
+</div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
