@@ -18,7 +18,7 @@ TEMPLATE_DIR = BASE_DIR / 'templates'
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-fallback-insecure-secret-key')
 
 # Production settings
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
