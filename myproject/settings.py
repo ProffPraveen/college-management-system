@@ -5,7 +5,7 @@ Django settings for myproject project.
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-import dj_database_url  # For PostgreSQL later (optional)
+  # For PostgreSQL later (optional)
 
 # Load environment variables from .env
 load_dotenv()
