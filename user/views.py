@@ -3,7 +3,7 @@ from email.message import Message
 from django.shortcuts import render
 from django.http import HttpResponse
 from docutils.nodes import description
-from tensorboard.plugins.custom_scalar.layout_pb2 import Category
+#from tensorboard.plugins.custom_scalar.layout_pb2 import Category
 
 from .models import *
 
